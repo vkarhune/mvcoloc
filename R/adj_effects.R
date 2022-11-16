@@ -1,3 +1,21 @@
+#' Calculate variant-phenotype associations adjusted for another phenotype using summary data
+#'
+#' @param beta1
+#' @param se1
+#' @param beta2
+#' @param se2
+#' @param eaf1
+#' @param eaf2
+#' @param n1
+#' @param n2
+#' @param corr
+#' @param varY1
+#' @param varY2
+#'
+#' @return
+#' @export
+#'
+#' @examples
 adj_effects <- function(beta1, se1, beta2, se2, eaf1, eaf2, n1, n2,
                         corr, varY1 = NULL, varY2 = NULL){
 

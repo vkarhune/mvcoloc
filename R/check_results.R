@@ -1,3 +1,14 @@
+#' Helper function to check multivariable colocalization results
+#'
+#' @param res
+#' @param type
+#' @param thresh1
+#' @param thresh2
+#'
+#' @return
+#' @export
+#'
+#' @examples
 check_results <- function(res, type = "cont", thresh1 = 0.5, thresh2 = 0.5){
 
   x1y <- switch(type, "cont" = "x1y", "bin" = "x1ybin", NULL)

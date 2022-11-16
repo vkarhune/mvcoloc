@@ -1,3 +1,21 @@
+#' Generate variant-phenotype summary statistics adjusted for another phenotype using summary data
+#'
+#' @param beta1
+#' @param se1
+#' @param eaf1
+#' @param n1
+#' @param var1
+#' @param beta2
+#' @param se2
+#' @param eaf2
+#' @param n2
+#' @param var2
+#' @param corr
+#'
+#' @return
+#' @export
+#'
+#' @examples
 adjusted_summarystats <- function(beta1, se1, eaf1, n1, var1,
                                   beta2, se2, eaf2, n2, var2,
                                   corr = NULL){

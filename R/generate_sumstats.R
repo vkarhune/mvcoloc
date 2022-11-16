@@ -1,3 +1,13 @@
+#' Generate summary statistics for a continuous phenotype
+#'
+#' @param phenotype
+#' @param x
+#' @param adj
+#'
+#' @return
+#' @export
+#'
+#' @examples
 generate_sumstats <- function(phenotype, x, adj = NULL){
 
   out <- t(vapply(seq_len(ncol(x)), function(i){

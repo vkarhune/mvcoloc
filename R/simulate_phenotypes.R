@@ -1,3 +1,22 @@
+#' Simulate a phenotype
+#'
+#' @param seed
+#' @param genotype_data1
+#' @param genotype_data2
+#' @param r2_lower
+#' @param r2_upper
+#' @param h.exp1
+#' @param h.exp2
+#' @param theta1
+#' @param theta2
+#' @param h.out
+#' @param theta.vec
+#' @param ybin_prev
+#'
+#' @return
+#' @export
+#'
+#' @examples
 simulate_phenotypes <- function(seed, genotype_data1, genotype_data2,
                                 r2_lower, r2_upper, h.exp1, h.exp2,
                                 theta1, theta2, h.out, theta.vec,

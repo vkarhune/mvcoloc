@@ -1,3 +1,13 @@
+#' Generate summary statistics for a binary phenotype
+#'
+#' @param phenotype
+#' @param x
+#' @param adj
+#'
+#' @return
+#' @export
+#'
+#' @examples
 generate_sumstats_logistic <- function(phenotype, x, adj = NULL){
 
   out <- t(vapply(seq_len(ncol(x)), function(i){

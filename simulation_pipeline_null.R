@@ -31,10 +31,10 @@ sim_results <- lapply(seq_len(reps), function(i){
 
 phenotypes <- simulate_phenotypes(seed = i,
                                   genotype_data1 = mcp1, genotype_data2 = mcp2,
-                                  r2_lower = 0.2, r2_upper = 0.5,
+                                  r2_lower = 0.5, r2_upper = 0.7,
                                   h.exp1 = 0.1, h.exp2 = 0.1,
                                   theta1 = 0.1, theta2 = 0.1,
-                                  h.out = 0.1, theta.vec = c(0.1, 0))
+                                  h.out = 0.1, theta.vec = c(0.2, 0))
 
 x1 <- phenotypes$x1
 x2 <- phenotypes$x2
