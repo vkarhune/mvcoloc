@@ -27,6 +27,8 @@ adj_effects <- function(beta1, se1, beta2, se2, eaf1, eaf2, n1, n2,
   beta2 <- beta2*sqrt(2*eaf2*(1-eaf2)/varY2)
   se2 <- se2*sqrt(2*eaf2*(1-eaf2)/varY2)
 
+  n <- max(n1, n2)
+
   S1 <- (n1-1)*se1^2 + beta1^2
   S2 <- (n2-1)*se2^2 + beta2^2
 

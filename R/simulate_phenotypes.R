@@ -80,11 +80,17 @@ simulate_phenotypes <- function(seed, genotype_data1, genotype_data2,
   y = theta.vec[1] * genotype_data2[,first.causal] +
     theta.vec[2] * genotype_data2[,second.causal] +
     rnorm(n=nrow(genotype_data2), mean=0, sd = sqrt(var.epsilon))
+
+  y_data1 = theta.vec[1] * genotype_data1[,first.causal] +
+    theta.vec[2] * genotype_data1[,second.causal] +
+    rnorm(n=nrow(genotype_data1), mean=0, sd = sqrt(var.epsilon))
+
   # summary(lm(y ~ mcp2[,first.causal] +  mcp2[,second.causal] ))
   y.bin = ifelse(y > quantile(y, probs = 1 - ybin_prev),1,0)
   # table(y.bin)
   # summary(glm(y.bin ~ mcp2[,first.causal] +  mcp2[,second.causal], family = binomial ))
 
-  list(x1 = x1, x2 = x2, y = y, y.bin = y.bin, causals = c(first.causal, second.causal))
+  list(x1 = x1, x2 = x2, y = y, y.bin = y.bin, y_data1 = y_data1,
+       causals = c(first.causal, second.causal))
 
 }

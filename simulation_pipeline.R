@@ -32,7 +32,7 @@ phenotypes <- simulate_phenotypes(seed = i,
                                   r2_lower = 0.5, r2_upper = 0.7,
                                   h.exp1 = 0.1, h.exp2 = 0.1, # affects Xs
                                   theta1 = 0.1, theta2 = 0.1, # affects Xs
-                                  h.out = 0.1, theta.vec = c(0.12, 0.08)) # affects Y
+                                  h.out = 0.1, theta.vec = c(0.1, 0.1)) # affects Y
 
 x1 <- phenotypes$x1
 x2 <- phenotypes$x2
